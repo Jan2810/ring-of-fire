@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
 import { MatInputModule } from '@angular/material/input';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -17,10 +17,13 @@ export class DialogAddPlayerComponent {
 
   name: string = '';
 
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<DialogAddPlayerComponent>
+  ) { }
 
-  onNoClick() {
-    
+  onNoClick(): void {
+    this.dialogRef.close();
   }
-
 }
+
+
