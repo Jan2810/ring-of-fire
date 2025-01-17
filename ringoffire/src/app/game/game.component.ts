@@ -7,11 +7,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { Game } from './../../models/game';
 import { PlayerComponent } from "../player/player.component";
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+import { GameInfoComponent } from "../game-info/game-info.component";
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, PlayerComponent, MatButtonModule, MatIconModule, MatInputModule],
+  imports: [CommonModule, PlayerComponent, MatButtonModule, MatIconModule, MatInputModule, GameInfoComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })
@@ -34,7 +35,6 @@ export class GameComponent {
   takeCard() {
     if (!this.pickCardAnimation) {
       this.currentCard = this.game.stack.pop() || '';
-      console.log(this.game);
       this.pickCardAnimation = true;
 
       setTimeout(() => {
