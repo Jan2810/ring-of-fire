@@ -1,0 +1,29 @@
+.player {
+    background-color: rgba(117, 96, 88, 0.664) !important;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 25px 0px 0px 25px;
+    color: whitesmoke;
+
+    span {
+        font-size: 24px;
+        margin-left: 16px;
+        font-weight: 500;
+    }
+
+    img {
+        margin-left: 8px;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+}
+
+.player-active {
+    background-color: coral !important;
+    width: 230px;
+    height: 55px;
+}
